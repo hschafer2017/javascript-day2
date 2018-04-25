@@ -6,18 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mathgame.css" type="text/css" />
     <title>Document</title>
 </head>
 
 <body>
     <nav>
-        
+        <div class="container">
+            <div class="col-xs-12">
+                <h2>Test your math!<h2>
+            </div>
+        </div>
     </nav>
     <section>
-    <button onclick="setAdditionGame()">Addition</button>
-    <button onclick="setSubtractionGame()">Subtraction</button>
-    <button onclick="setMultiplicationGame()">Multiplication</button>
+        <div class="container">
+            <div class="col-xs-12">
+    <button type="button" class="btn btn-info" onclick="setAdditionGame()">Addition</button>
+    <button type="button" class="btn btn-info" onclick="setSubtractionGame()">Subtraction</button>
+    <button type="button" class="btn btn-info" onclick="setMultiplicationGame()">Multiplication</button>
+    <button type="button" class="btn btn-info" onclick="setDivisionGame()">Division</button>
+    </div>
     <p>Your score: <span id="score">0</span></p>
     <p id="question"></p>
     <form id="quizForm" name="answerForm" onsubmit="checkAnswer(); return false;" action="" data-gametype="addition">
@@ -27,7 +37,11 @@
         <input type="submit" value="submit">
     </form>
     <script type="text/javascript" src="mathgame.js"></script>
+    </div>
     </section>
+    <footer>
+        <h3>The Math Game.<h3>
+    </footer>
 </body>
 
 </html>

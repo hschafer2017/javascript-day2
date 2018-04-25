@@ -17,6 +17,10 @@ function setMultiplicationGame() {
     answerForm.setAttribute("data-gametype", "multiplication");
     multiplicationQuiz()
 }
+function setDivisionGame() {
+    answerForm.setAttribute("data-gametype", "division");
+    divisionQuiz()
+}
 
 function checkAnswer() {
     let gametype = answerForm.getAttribute("data-gametype");
@@ -38,6 +42,8 @@ function checkAnswer() {
     }
     else if (gametype == "multiplication") {
         multiplicationQuiz();
+    } else if (gametype == "division"){
+        divisionQuiz();
     }
     return false;
 }
@@ -48,7 +54,7 @@ function additionQuiz() {
     let num2 = Math.floor(Math.random() * 50);
 
     questionbox.textContent = "What is: " + num1 + " + " + num2 + "?";
-    answerForm["rightAnswer"].value = (num1 + num2);
+    answerForm["rightAnswer"].value = (num1 + num2); 
 }
 // math.random gives you a random number between 0 and 50, and it can be a decimal. Math.floor then rounds it back down so you get a whole number. 
 additionQuiz();
@@ -57,11 +63,14 @@ additionQuiz();
 function subtractionQuiz() {
     let num1 = Math.floor(Math.random() * 50);
     let num2 = Math.floor(Math.random() * 50);
+    if (num1 > num2) {
 
     questionbox.textContent = "What is: " + num1 + " - " + num2 + "?";
     answerForm["rightAnswer"].value = (num1 - num2);
-         if (num1 < num2) {
-           return; 
+        
+    } else {
+        questionbox.textContent = "What is: " + num2 + " - " + num1 + "?";
+    answerForm["rightAnswer"].value = (num2 - num1);
     }
 
 }
@@ -76,3 +85,19 @@ function multiplicationQuiz() {
     answerForm["rightAnswer"].value = (num1 * num2);
 }
 multiplicationQuiz();
+
+// DIVISION
+function divisionQuiz() {
+    let num1 = Math.floor(Math.random() * 50);
+    let num2 = Math.floor(Math.random() * 50);
+    if (num1 > num2) {
+
+    questionbox.textContent = "What is: " + num1 + " / " + num2 + "?";
+    answerForm["rightAnswer"].value = (num1 / num2);
+        
+    } else {
+        questionbox.textContent = "What is: " + num2 + " / " + num1 + "?";
+    answerForm["rightAnswer"].value = (num2 / num1);
+    }
+}
+divisionQuiz();

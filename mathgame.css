@@ -1,0 +1,29 @@
+nav {
+    background-color: #525252;
+    color:#fafafa;
+    text-align: center;
+    font-family: monospace;
+}
+section{
+    background-color: #FFF0F5;
+    font-family: monospace;
+    font-size: 28px;
+    height: 100vh;
+}
+.col-xs-12{
+    text-align: center;
+}
+footer{
+    background-color:#525252;
+    color: #fafafa;
+    /*position: fixed;*/
+    width: 100vw;
+    height: 60px;
+    font-size: 15px;
+    font-family: monospace;
+}
+h3 {
+    margin-top: 0;
+    margin-bottom:0;
+    padding: 15px;
+}
